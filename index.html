@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإدارة العامة للتوسع الأفقي والمشروعات بإسنا | وزارة الموارد المائية والري</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        eco: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        nile: {
+                            50: '#f0f9ff',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-eco-600 selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Titles -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-nile-600 to-eco-700 flex items-center justify-center text-white shadow-md shadow-nile-600/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-water text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-black text-sm sm:text-base text-slate-900 leading-tight">الإدارة العامة للتوسع الأفقي والمشروعات بإسنا</span>
+                        <span class="block text-xs font-bold text-nile-600 tracking-wider">وزارة الموارد المائية والري (أسوان - الأقصر - قنا)</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-7 font-semibold text-sm text-slate-600">
+                    <a href="#about" class="hover:text-eco-600 transition-colors">عن الإدارة</a>
+                    <a href="#operations" class="hover:text-eco-600 transition-colors">العمليات والخطط</a>
+                    <a href="#gallery" class="hover:text-eco-600 transition-colors">ألبوم الأعمال</a>
+                    <a href="#engineers" class="hover:text-eco-600 transition-colors">الهيكل التنظيمي</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-eco-600 text-white font-bold shadow-md shadow-eco-600/20 hover:bg-eco-700 transition-all">تواصل رسمي</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-slate-700 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3 font-semibold shadow-xl">
+            <a href="#about" class="block py-2 text-slate-700 hover:text-eco-600">عن الإدارة</a>
+            <a href="#operations" class="block py-2 text-slate-700 hover:text-eco-600">العمليات والخطط</a>
+            <a href="#gallery" class="block py-2 text-slate-700 hover:text-eco-600">ألبوم الأعمال</a>
+            <a href="#engineers" class="block py-2 text-slate-700 hover:text-eco-600">الهيكل التنظيمي</a>
+            <a href="#contact" class="block text-center py-3 rounded-xl bg-eco-600 text-white shadow">تواصل رسمي</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-gradient-to-b from-eco-50 via-white to-slate-50 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-nile-50 text-nile-900 text-xs sm:text-sm font-bold border border-nile-200">
+                            <i class="fa-solid fa-landmark text-nile-600"></i> جمهورية مصر العربية - وزارة الموارد المائية والري
+                        </div>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-eco-100 text-eco-800 text-xs sm:text-sm font-bold border border-eco-200">
+                            <i class="fa-solid fa-map-location-dot text-eco-600"></i> زمام محافظات: أسوان، الأقصر، قنا
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">
+                        الإدارة العامة <span class="text-eco-600">للتوسع الأفقي والمشروعات</span> بإسنا
+                    </h1>
+                    
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        تنفيذ وإدارة المشروعات القومية الكبرى على المجاري المائية، والكباري والمنشآت المائية، والتغطيات الخرسانية المسلحة، وتبطين الترع بالخرسانات ودبش المونة لدعم الأمن المائي والتنمية الزراعية.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#operations" class="px-7 py-3.5 rounded-xl bg-eco-600 text-white font-bold shadow-lg shadow-eco-600/30 hover:bg-eco-700 transition-all flex items-center gap-3">
+                            <span>جدول العمليات والخطط</span>
+                            <i class="fa-solid fa-table-list"></i>
+                        </a>
+                        <a href="#engineers" class="px-7 py-3.5 rounded-xl bg-white text-slate-700 font-bold border border-slate-300 hover:bg-slate-100 transition-all flex items-center gap-3">
+                            <i class="fa-solid fa-sitemap text-nile-600"></i>
+                            <span>الهيكل التنظيمي للإدارة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Emblem Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-nile-600 to-eco-600 opacity-30 blur-xl"></div>
+                        <div class="relative bg-white rounded-3xl p-8 shadow-2xl border border-slate-100 space-y-6 text-center">
+                            <div class="flex justify-center items-center gap-4 border-b border-slate-100 pb-6">
+                                <!-- Egyptian Flag Emblem Symbol -->
+                                <div class="w-16 h-16 rounded-2xl bg-red-800/10 border border-red-200 flex items-center justify-center text-red-700 text-2xl font-bold shadow-sm">
+                                    <i class="fa-solid fa-flag"></i>
+                                </div>
+                                <div class="w-16 h-16 rounded-2xl bg-eco-50 border border-eco-200 flex items-center justify-center text-eco-700 text-2xl font-bold shadow-sm">
+                                    <i class="fa-solid fa-water"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-xl text-slate-900 mb-1">قطاع التوسع الأفقي والمشروعات</h3>
+                                <p class="text-sm font-semibold text-nile-600">الإدارة العامة بإسنا</p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 pt-2 text-xs font-bold">
+                                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">أسوان</div>
+                                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">الأقصر</div>
+                                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">قنا</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-eco-50 border border-eco-100 text-xs text-eco-900 font-medium">
+                                نطاق عمل هندسي متكامل على جميع الترع والمجاري المائية الكبرى.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Administration Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-eco-600 font-bold uppercase tracking-wider text-sm">نبذة تعريفية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900">اختصاصات وإنجازات الإدارة العامة بإسنا</h2>
+                <p class="text-slate-600 text-lg">
+                    الركيزة التنفيذية والهندسية لوزارة الموارد المائية والري في زمام محافظات أسوان والأقصر وقنا.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-eco-200 transition-all hover:shadow-xl group">
+                    <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-xl font-bold mb-5 group-hover:bg-eco-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">تبطين الترع والقنوات</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        تنفيذ أعمال تبطين القنوات والترع الكبرى باستخدام الخرسانات المسلحة والعادية ودبش المونة لترشيد الاستهلاك ومنع التسرّب.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-eco-200 transition-all hover:shadow-xl group">
+                    <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-xl font-bold mb-5 group-hover:bg-eco-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-bridge"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">إنشاء الكباري المائية</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        تصميم وإنشاء كباري السيارات والمشاة على المجاري المائية لتيسير حركة المرور وربط القرى والمدن في المحافظات الثلاث.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-eco-200 transition-all hover:shadow-xl group">
+                    <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-xl font-bold mb-5 group-hover:bg-eco-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">التغطيات الخرسانية المسلحة</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        تنفيذ أعمال التغطيات الخرسانية للمجاري المائية ذات الطبيعة الخاصة داخل الكتل السكنية وفق أعلى معايير الجودة الإنشائية.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-eco-200 transition-all hover:shadow-xl group">
+                    <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-xl font-bold mb-5 group-hover:bg-eco-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">المشروعات الكبرى</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        إدارة المشروعات التنموية الكبرى بزمام أسوان، الأقصر، وقنا لتحقيق أهداف استراتيجية الدولة للتوسع الزراعي والأمن المائي.
+                    </p>
+                </div>
+            </div>
+    <!-- Administration Engineers & Staff Directory Section -->
+    <section id="engineers" class="py-20 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-eco-600 font-bold uppercase tracking-wider text-sm">القيادات الهندسية والإدارية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900">الهيكل التنظيمي للإدارة العامة بإسنا</h2>
+                <p class="text-slate-600 text-lg">نخبة من القيادات الهندسية والفنية والإدارية المشرفة على تنفيذ المشروعات القومية الكبرى.</p>
+            </div>
+
+            <!-- 1. Director General (Featured Top Card) -->
+            <div class="max-w-md mx-auto mb-12">
+                <div class="bg-white rounded-3xl overflow-hidden border-2 border-eco-600 shadow-xl hover:shadow-2xl transition-all group text-center">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="م/ محمود محمد سيد" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/14532d/ffffff?text=المدير+العام'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent flex items-end justify-center p-4">
+                            <span class="px-4 py-1.5 rounded-full bg-eco-600 text-white text-xs font-bold shadow-md">القيادة العليا للإدارة</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-black text-slate-900">م/ محمود محمد سيد</h3>
+                        <p class="text-eco-700 font-extrabold text-base">المدير العام</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            الإشراف العام والتوجيه الاستراتيجي لكافة مشروعات التوسع الأفقي والمنشآت المائية بزمام محافظات أسوان والأقصر وقنا.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Deputy & Irrigation Inspectors -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                <!-- Deputy Director -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-nile-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="م/ إبتهال محمود" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0369a1/ffffff?text=وكيل+الإدارة'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-nile-600 text-white text-xs font-bold shadow">وكيل الإدارة</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-xl font-bold text-slate-900">م/ إبتهال محمود</h3>
+                        <p class="text-nile-700 font-bold text-sm">وكيل الإدارة</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            معاونة المدير العام في متابعة سير العمل الهندسي والإداري وتنسيق خطط التنفيذ بالمحافظات.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Irrigation Inspector 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" alt="م/ أحمد محمد الأمير عثمان" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0f172a/ffffff?text=مفتش+ري'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-slate-800 text-white text-xs font-bold shadow">تفتيش الري</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-xl font-bold text-slate-900">م/ أحمد محمد الأمير عثمان</h3>
+                        <p class="text-eco-700 font-bold text-sm">مفتش ري</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            الإشراف الفني والهيدروليكي على أعمال التفتيش ومتابعة توزيع المياه وصيانة المجاري المائية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Irrigation Inspector 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop" alt="م/ مروة هشام" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0f172a/ffffff?text=مفتش+ري'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-slate-800 text-white text-xs font-bold shadow">تفتيش الري</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-xl font-bold text-slate-900">م/ مروة هشام</h3>
+                        <p class="text-eco-700 font-bold text-sm">مفتش ري</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            متابعة تنفيذ مشروعات التأهيل والتبطين ومراجعة الموقف التنفيذي للمنشآت المائية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Works Directors & Assistant Works Directors -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                <!-- Senior Works Director -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-52 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="م/ محمد عبد العال" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/15803d/ffffff?text=مدير+أعمال+أول'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-eco-600 text-white text-xs font-bold shadow">إدارة المشروعات</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-lg font-bold text-slate-900">م/ محمد عبد العال</h3>
+                        <p class="text-eco-700 font-bold text-sm">مدير أعمال أول</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            قيادة فرق التنفيذ الميداني ومراجعة المستخلصات والمواصفات الفنية للعمليات الكبرى.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Works Director 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-52 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop" alt="م/ على إبراهيم سعيد" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=مدير+أعمال'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-nile-600 text-white text-xs font-bold shadow">إدارة الأعمال</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-lg font-bold text-slate-900">م/ على إبراهيم سعيد</h3>
+                        <p class="text-nile-700 font-bold text-sm">مدير أعمال</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            الإشراف المباشر على تنفيذ أعمال الكباري وتبطين الترع والالتزام بالبرامج الزمنية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Works Director 2 (Eng. Waleed) -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-52 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=600&auto=format&fit=crop" alt="م/ وليد محمود عبدالرحمن" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=مدير+أعمال'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-nile-600 text-white text-xs font-bold shadow">إدارة الأعمال</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-lg font-bold text-slate-900">م/ وليد محمود عبدالرحمن</h3>
+                        <p class="text-nile-700 font-bold text-sm">مدير أعمال</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            إدارة المشروعات الإنشائية والمائية والتغطيات الخرسانية وضمان معايير الجودة والاستدامة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Works Director 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-52 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="م/ أحمد طارق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=مدير+أعمال'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-nile-600 text-white text-xs font-bold shadow">إدارة الأعمال</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-lg font-bold text-slate-900">م/ أحمد طارق</h3>
+                        <p class="text-nile-700 font-bold text-sm">مدير أعمال</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            متابعة تنفيذ العمليات الهندسية على المجاري المائية وإعداد التقارير الفنية الدورية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Assistant Works Director -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-52 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop" alt="م/ سعد محمد النوبي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/334155/ffffff?text=مساعد+مدير+أعمال'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-slate-700 text-white text-xs font-bold shadow">معاونة إدارة الأعمال</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-lg font-bold text-slate-900">م/ سعد محمد النوبي</h3>
+                        <p class="text-slate-700 font-bold text-sm">مساعد مدير أعمال</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            الإشراف الميداني على مواقع العمل واستلام الخامات ومطابقتها للمواصفات القياسية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Assistant Engineer 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-52 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&auto=format&fit=crop" alt="م/ محمود شعبان" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/16a34a/ffffff?text=مهندس+معاون'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="px-3 py-1 rounded-lg bg-eco-600 text-white text-xs font-bold shadow">الهندسة الميدانية</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-1.5">
+                        <h3 class="text-lg font-bold text-slate-900">م/ محمود شعبان</h3>
+                        <p class="text-eco-700 font-bold text-sm">مهندس معاون</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            متابعة التنفيذ اليومي بالمواقع ورفع المقاسات وإعداد تقارير نسب الإنجاز.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Assistant Engineer 2 & Technical / Administrative Staff -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Assistant Engineer 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?q=80&w=600&auto=format&fit=crop" alt="م/ عبدالجليل" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/16a34a/ffffff?text=مهندس+معاون'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-3">
+                            <span class="px-2.5 py-1 rounded-lg bg-eco-600 text-white text-xs font-bold shadow">الهندسة الميدانية</span>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">م/ عبدالجليل</h3>
+                        <p class="text-eco-700 font-bold text-sm">مهندس معاون</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            متابعة اختبارات الجودة للخرسانة وأعمال التبطين والكباري بالمشروعات.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contracts Officer -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=600&auto=format&fit=crop" alt="أ/ مصطفى عمار" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0f172a/ffffff?text=مسئول+العقود'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-3">
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-white text-xs font-bold shadow">العقود والمشتريات</span>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">أ/ مصطفى عمار</h3>
+                        <p class="text-slate-700 font-bold text-sm">مسئول العقود</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            إدارة إجراءات الطرح والمناقصات وصياغة ومتابعة العقود مع الشركات المنفذة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Irrigation & Surveying Technician -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?q=80&w=600&auto=format&fit=crop" alt="أ/ أحمد حجاجي محمد عبدالكريم" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0369a1/ffffff?text=فني+ري+ومساحة'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-3">
+                            <span class="px-2.5 py-1 rounded-lg bg-nile-600 text-white text-xs font-bold shadow">المساحة والري</span>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">أ/ أحمد حجاجي محمد عبدالكريم</h3>
+                        <p class="text-nile-700 font-bold text-sm">فني ري ومساحة</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            تنفيذ الأعمال المساحية والرفوعات الطبوغرافية وتحديد المناسيب للترع والمنشآت.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- HR Manager -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop" alt="أ/ خديجة محمد عبدالوهاب" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/15803d/ffffff?text=الموارد+البشرية'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-3">
+                            <span class="px-2.5 py-1 rounded-lg bg-eco-600 text-white text-xs font-bold shadow">الشئون الإدارية</span>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">أ/ خديجة محمد عبدالوهاب</h3>
+                        <p class="text-eco-700 font-bold text-sm">مدير الموارد البشرية</p>
+                        <p class="text-slate-500 text-xs leading-relaxed pt-2 border-t border-slate-100">
+                            إدارة شئون العاملين وتنظيم الهيكل الإداري وتطوير كفاءة الكوادر البشرية بالإدارة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-eco-600 font-bold uppercase tracking-wider text-sm">التواصل الرسمي</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900">مقر الإدارة العامة للتوسع الأفقي والمشروعات بإسنا</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        نستقبل الاستفسارات والمراسلات الرسمية والمهنية المتعلقة بالمشروعات والعمليات الهندسية بمحافظات أسوان والأقصر وقنا.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold">العنوان الرئيسي</span>
+                                <span class="font-bold text-slate-800">مستعمرة الري - إسنا - الأقصر</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold">تليفون / فاكس الإدارة</span>
+                                <a href="tel:0952600430" dir="ltr" class="font-bold text-slate-800 hover:text-eco-600 transition-colors">0952600430</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold">البريد الإلكتروني الرسمي (ايميل الإدارة)</span>
+                                <a href="mailto:tawas2020.esna@gmail.com" dir="ltr" class="font-bold text-slate-800 hover:text-eco-600 transition-colors break-all">tawas2020.esna@Gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold">استضافة الموقع</span>
+                                <span class="font-bold text-slate-800">GitHub Pages (جاهز للرفع)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">إرسال مراسلة رسمية</h3>
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">اسم المرسل / الجهة</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 focus:border-eco-600 focus:outline-none transition-colors" placeholder="ادخل اسمك أو صفتك...">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 focus:border-eco-600 focus:outline-none transition-colors" placeholder="name@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">موضوع المراسلة / الاستفسار</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 focus:border-eco-600 focus:outline-none transition-colors" placeholder="اكتب تفاصيل المراسلة الهندسية..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-eco-600 text-white font-bold shadow-lg shadow-eco-600/30 hover:bg-eco-700 transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>إرسال المراسلة</span>
+                            </button>
+                        </form>
+                        <div id="success-box" class="hidden mt-4 p-4 rounded-xl bg-eco-100 text-eco-800 font-bold text-center border border-eco-200">
+                            تم إرسال المراسلة بنجاح! سيتم المتابعة من قبل القسم المختص.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-eco-600 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <span class="font-black text-lg">الإدارة العامة للتوسع الأفقي والمشروعات بإسنا</span>
+            </div>
+            <p class="text-slate-400 text-sm max-w-lg mx-auto">
+                وزارة الموارد المائية والري | زمام محافظات أسوان، الأقصر، وقنا.
+            </p>
+            <div class="flex justify-center gap-4 pt-2 text-slate-400">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-eco-600 hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-eco-600 hover:text-white transition-colors"><i class="fa-solid fa-globe"></i></a>
+            </div>
+            <p class="text-xs text-slate-500 pt-6 border-t border-slate-800">
+                &copy; 2026 الإدارة العامة للتوسع الأفقي والمشروعات بإسنا - وزارة الموارد المائية والري. جميع الحقوق محفوظة.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Menu, Tabs & Form Submission -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tab Switching for Operations & Investment Plan
+        function switchTab(type) {
+            const btnCurrent = document.getElementById('btn-current');
+            const btnUpcoming = document.getElementById('btn-upcoming');
+            const tableCurrent = document.getElementById('table-current');
+            const tableUpcoming = document.getElementById('table-upcoming');
+
+            if (type === 'current') {
+                btnCurrent.className = "px-6 py-3 rounded-xl font-bold text-sm bg-eco-600 text-white shadow-md shadow-eco-600/30 transition-all";
+                btnUpcoming.className = "px-6 py-3 rounded-xl font-bold text-sm bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition-all";
+                tableCurrent.classList.remove('hidden');
+                tableUpcoming.classList.add('hidden');
+            } else {
+                btnUpcoming.className = "px-6 py-3 rounded-xl font-bold text-sm bg-nile-600 text-white shadow-md shadow-nile-600/30 transition-all";
+                btnCurrent.className = "px-6 py-3 rounded-xl font-bold text-sm bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition-all";
+                tableUpcoming.classList.remove('hidden');
+                tableCurrent.classList.add('hidden');
+            }
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('success-box');
+            successBox.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Gallery Filter by Governorate
+        function filterGallery(gov) {
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+            buttons.forEach(btn => {
+                btn.className = "gallery-filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all";
+            });
+
+            const activeBtn = document.getElementById('filter-' + gov);
+            if (activeBtn) {
+                activeBtn.className = "gallery-filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-eco-600 text-white shadow-md shadow-eco-600/20 transition-all";
+            }
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (gov === 'all' || item.classList.contains(gov)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
